@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Haneesh Educational Institutions | Best School</title>
+
+<meta name="description" content="Haneesh Educational Institutions - Quality school education, academic excellence and all-round development.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+:root {
+    --orange: #f47721;
+    --dark: #252525;
+    --light: #fff5ec;
+}
+
+header {
+    background: white;
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px #00000012;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.logo small {
+    display: block;
+    color: #444;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 23px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav a:hover { color: var(--orange); }
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 85px 7%;
+    background: linear-gradient(110deg,#fff3e8,#fff);
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content, .hero-image { flex: 1; }
+
+.tag {
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 49px;
+    line-height: 1.2;
+    margin: 15px 0;
+    color: var(--dark);
+}
+
+.hero h1 span { color: var(--orange); }
+
+.hero p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    background: var(--orange);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d85d0d;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+section { padding: 75px 7%; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: var(--dark);
+}
+
+.section-title span { color: var(--orange); }
+
+.section-title p { color: #777; }
+
+/* ABOUT */
+
+.about {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+
+.about > div { flex: 1; }
+
+.about img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.about p {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+/* HIGHLIGHTS */
+
+.highlights { background: var(--light); }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000009;
+    transition: .3s;
+}
+
+.card:hover { transform: translateY(-7px); }
+
+.card .icon { font-size: 38px; }
+
+.card h3 {
+    color: var(--orange);
+    margin: 12px 0;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* CLASSES */
+
+.classes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.class-card {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s;
+}
+
+.class-card:hover {
+    border-color: var(--orange);
+    box-shadow: 0 5px 18px #00000010;
+}
+
+.class-card h3 {
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+/* ACTIVITIES */
+
+.activities { background: #fffaf6; }
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.activity {
+    text-align: center;
+    background: white;
+    padding: 28px 18px;
+    border-radius: 12px;
+}
+
+.activity h3 {
+    color: var(--orange);
+    margin: 10px 0;
+}
+
+/* ADMISSIONS */
+
+.admissions {
+    background: var(--orange);
+    color: white;
+    text-align: center;
+}
+
+.admissions h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.admissions p { margin-bottom: 25px; }
+
+.admissions .btn {
+    background: white;
+    color: var(--orange);
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    background: var(--light);
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact span { color: var(--orange); }
+
+.contact p {
+    color: #666;
+    margin: 8px 0;
+}
+
+footer {
+    background: #252525;
+    color: white;
+    padding: 28px 7%;
+    text-align: center;
+}
+
+footer span { color: var(--orange); }
+
+@media(max-width:900px) {
+    .cards { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:768px) {
+    header { padding: 15px 5%; }
+
+    .menu-btn { display: block; }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: white;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav.active { display: flex; }
+
+    .hero, .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 { font-size: 36px; }
+
+    .classes, .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section { padding: 55px 6%; }
+}
+
+@media(max-width:480px) {
+    .cards { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 31px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="logo">
+        HANEESH
+        <small>EDUCATIONAL INSTITUTIONS</small>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navbar">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#highlights" onclick="closeMenu()">Why Us</a>
+        <a href="#classes" onclick="closeMenu()">Classes</a>
+        <a href="#activities" onclick="closeMenu()">Activities</a>
+        <a href="#admissions" onclick="closeMenu()">Admissions</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">Welcome to Haneesh Educational Institutions</div>
+
+        <h1>
+            Shaping Young Minds,
+            <span>Building Bright Futures!</span>
+        </h1>
+
+        <p>
+            Every child has the potential to achieve greatness.
+            We provide a nurturing environment where students
+            learn, explore, grow and succeed.
+        </p>
+
+        <a href="#admissions" class="btn">Enquire for Admission</a>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1000"
+        alt="Students learning in school classroom">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div>
+            <div class="tag">About Our School</div>
+
+            <h2>
+                Education Beyond
+                <span style="color:#f47721">Classrooms</span>
+            </h2>
+
+            <p>
+                Haneesh Educational Institutions is dedicated
+                to providing quality school education and
+                nurturing the next generation of learners.
+            </p>
+
+            <p>
+                We believe in developing not just academic
+                knowledge but also creativity, discipline,
+                confidence and strong values.
+            </p>
+
+            <p>
+                Our vision is to help every student discover
+                their talents and become responsible citizens.
+            </p>
+
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900"
+            alt="Children enjoying education">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="highlights" id="highlights">
+
+    <div class="section-title">
+        <h2>Why Choose <span>Haneesh?</span></h2>
+        <p>Creating a strong foundation for lifelong success.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Quality Education</h3>
+            <p>Strong academic foundations and meaningful learning.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👩‍🏫</div>
+            <h3>Dedicated Teachers</h3>
+            <p>Supportive teaching and individual attention.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Smart Learning</h3>
+            <p>Encouraging curiosity, innovation and creativity.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>All-Round Growth</h3>
+            <p>Developing confidence, leadership and life skills.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CLASSES -->
+
+<section id="classes">
+
+    <div class="section-title">
+        <h2>Our <span>Academic Programs</span></h2>
+        <p>Learning opportunities for every stage of childhood.</p>
+    </div>
+
+    <div class="classes">
+
+        <div class="class-card">
+            <h3>Pre-Primary</h3>
+            <p>Nursery, LKG and UKG</p>
+            <p>Play-based learning, creativity and early development.</p>
+        </div>
+
+        <div class="class-card">
+            <h3>Primary School</h3>
+            <p>Classes 1 to 5</p>
+            <p>Building essential skills and strong academic foundations.</p>
+        </div>
+
+        <div class="class-card">
+            <h3>Upper Primary & High School</h3>
+            <p>Classes 6 to 10</p>
+            <p>Academic excellence, independent thinking and future readiness.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ACTIVITIES -->
+
+<section class="activities" id="activities">
+
+    <div class="section-title">
+        <h2>Beyond <span>Academics</span></h2>
+        <p>Learning, playing and discovering new talents.</p>
+    </div>
+
+    <div class="activity-grid">
+
+        <div class="activity">
+            <div class="icon">⚽</div>
+            <h3>Sports & Games</h3>
+            <p>Building teamwork, fitness and sportsmanship.</p>
+        </div>
+
+        <div class="activity">
+            <div class="icon">🎨</div>
+            <h3>Arts & Creativity</h3>
+            <p>Encouraging imagination and artistic expression.</p>
+        </div>
+
+        <div class="activity">
+            <div class="icon">🎭</div>
+            <h3>Cultural Activities</h3>
+            <p>Celebrating talent, traditions and confidence.</p>
+        </div>
+
+        <div class="activity">
+            <div class="icon">💻</div>
+            <h3>Technology Learning</h3>
+            <p>Developing digital awareness and modern skills.</p>
+        </div>
+
+        <div class="activity">
+            <div class="icon">🔬</div>
+            <h3>Science & Discovery</h3>
+            <p>Exploring ideas through curiosity and experiments.</p>
+        </div>
+
+        <div class="activity">
+            <div class="icon">🌱</div>
+            <h3>Values & Leadership</h3>
+            <p>Developing responsibility, kindness and leadership.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ADMISSIONS -->
+
+<section class="admissions" id="admissions">
+
+    <h2>Admissions Open!</h2>
+
+    <p>
+        Give your child the gift of quality education.
+        Begin their journey towards a bright future with us.
+    </p>
+
+    <a href="#contact" class="btn">Enquire Now</a>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Get in <span>Touch With Us</span></h2>
+
+    <p>Haneesh Educational Institutions</p>
+
+    <p>📍 School Address: Update your school address here</p>
+
+    <p>📞 Phone: Update your contact number here</p>
+
+    <p>✉️ Email: Update your school email here</p>
+
+    <br>
+
+    <a href="mailto:info@example.com" class="btn">
+        Send an Enquiry
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3><span>HANEESH</span> EDUCATIONAL INSTITUTIONS</h3>
+
+    <p>Learn • Grow • Achieve</p>
+
+    <p>© 2026 Haneesh Educational Institutions. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navbar").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
